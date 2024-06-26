@@ -25,5 +25,10 @@ namespace PersonaTest.Core.Services
             };
             await unitOfWork.PersonaRepository.AddPersonaAsync(persona);
         }
+
+        public async Task<List<Persona>> GetAllSync()
+        {
+            return await unitOfWork.PersonaRepository.GetAllPersonaAsync();
+        }
     }
 }

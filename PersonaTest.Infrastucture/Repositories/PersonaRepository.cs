@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using PersonaTest.Infrastucture.Models;
 using PersonaTest.Infrastucture.Repositories.Interfaces;
 using System;
@@ -21,6 +22,11 @@ namespace PersonaTest.Infrastucture.Repositories
         {
             await personaTestContext.Persons.AddAsync(persona);
             await personaTestContext.SaveChangesAsync();
+        }
+
+        public async Task<List<Persona>> GetAllPersonaAsync()
+        {
+            return await personaTestContext.Persons.Select(x => x).ToListAsync();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PersonaTest.Core.Services.Interfaces;
+using PersonaTest.Infrastucture.Models;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace PersonaTest.API.Controllers
@@ -22,6 +23,12 @@ namespace PersonaTest.API.Controllers
             return Ok($"Unit has been added!");
         }
 
-        
+        [HttpGet("all")]
+        public async Task<List<Persona>> GetAllPersonaAsync()
+        {
+            return await personaService.GetAllSync();
+        }
+
+
     }
 }

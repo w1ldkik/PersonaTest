@@ -10,5 +10,6 @@ namespace PersonaTest.Infrastucture.Repositories.Interfaces
     public interface IPersonaRepository
     {
         Task AddPersonaAsync(Persona persona);
+        Task<List<Persona>> GetAllPersonaAsync();
     }
 }
