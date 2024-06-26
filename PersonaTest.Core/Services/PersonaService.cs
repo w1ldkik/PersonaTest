@@ -39,5 +39,24 @@ namespace PersonaTest.Core.Services
         {
             return unitOfWork.PersonaRepository.GetPersonaById(id);
         }
+
+        public async Task<bool> ValidateAndUpdateAsync(Guid id, string firstName, string lastName)
+        {
+            var existingPersona = GetByIdAsync(id);
+
+            if (existingPersona != null)
+            {
+                
+                existingPersona.FirstName = firstName;
+                existingPersona.LastName = lastName;
+
+                await unitOfWork.PersonaRepository.UpdatePersonaAsync(existingPersona);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

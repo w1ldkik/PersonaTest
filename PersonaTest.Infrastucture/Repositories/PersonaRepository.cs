@@ -40,5 +40,11 @@ namespace PersonaTest.Infrastucture.Repositories
             personaTestContext.Remove(persona);
             await personaTestContext.SaveChangesAsync();
         }
+
+        public async Task UpdatePersonaAsync(Persona persona)
+        {
+            personaTestContext.Persons.Update(persona);
+            await personaTestContext.SaveChangesAsync();
+        }
     }
 }

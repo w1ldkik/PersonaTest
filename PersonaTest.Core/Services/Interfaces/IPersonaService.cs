@@ -13,5 +13,6 @@ namespace PersonaTest.Core.Services.Interfaces
         Task<List<Persona>> GetAllSync();
         Task ValidateAndDeleteAsync(Guid id);
         Persona GetByIdAsync(Guid id);
+        Task<bool> ValidateAndUpdateAsync(Guid id, string firstName, string lastName);
     }
 }
