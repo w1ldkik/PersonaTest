@@ -29,6 +29,13 @@ namespace PersonaTest.API.Controllers
             return await personaService.GetAllSync();
         }
 
+        [HttpDelete]
+        public async Task<IActionResult> DeletePersonbyId(Guid id)
+        {
+            await personaService.ValidateAndDeleteAsync(id);
+            return Ok($"Persona '{id}' has been deleted!");
+        }
+
 
     }
 }

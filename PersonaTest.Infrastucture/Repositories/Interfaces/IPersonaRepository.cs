@@ -11,5 +11,7 @@ namespace PersonaTest.Infrastucture.Repositories.Interfaces
     {
         Task AddPersonaAsync(Persona persona);
         Task<List<Persona>> GetAllPersonaAsync();
+        Persona GetPersonaById(Guid id);
+        Task DeletePersonaAsync(Persona persona);
     }
 }

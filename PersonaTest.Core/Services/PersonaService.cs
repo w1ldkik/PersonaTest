@@ -30,5 +30,14 @@ namespace PersonaTest.Core.Services
         {
             return await unitOfWork.PersonaRepository.GetAllPersonaAsync();
         }
+
+        public async Task ValidateAndDeleteAsync(Guid id)
+        {
+            await unitOfWork.PersonaRepository.DeletePersonaAsync(GetByIdAsync(id));
+        }
+        public Persona GetByIdAsync(Guid id)
+        {
+            return unitOfWork.PersonaRepository.GetPersonaById(id);
+        }
     }
 }

@@ -28,5 +28,17 @@ namespace PersonaTest.Infrastucture.Repositories
         {
             return await personaTestContext.Persons.Select(x => x).ToListAsync();
         }
+
+        public Persona GetPersonaById(Guid id)
+        {
+            return  personaTestContext.Persons.Where(x => x.Id == id).FirstOrDefault();
+            
+        }
+
+        public async Task DeletePersonaAsync(Persona persona)
+        {
+            personaTestContext.Remove(persona);
+            await personaTestContext.SaveChangesAsync();
+        }
     }
 }
