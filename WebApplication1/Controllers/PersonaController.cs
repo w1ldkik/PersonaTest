@@ -5,7 +5,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace PersonaTest.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/person")]
     [ApiController]
     public class PersonaController : ControllerBase
     {
@@ -23,7 +23,7 @@ namespace PersonaTest.API.Controllers
             return Ok($"Unit has been added!");
         }
 
-        [HttpGet("all")]
+        [HttpGet]
         public async Task<List<Persona>> GetAllPersonaAsync()
         {
             return await personaService.GetAllSync();
@@ -36,7 +36,7 @@ namespace PersonaTest.API.Controllers
             return Ok($"Persona '{id}' has been deleted!");
         }
 
-        [HttpPut("update")]
+        [HttpPut]
         public async Task<IActionResult> UpdatePersonByIdAsync(Guid id, string firstName,string lastName)
         {
             bool updated = await personaService.ValidateAndUpdateAsync(id, firstName, lastName);

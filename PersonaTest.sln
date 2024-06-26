@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaTest.Core", "Persona
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaTest.Infrastucture", "PersonaTest.Infrastucture\PersonaTest.Infrastucture.csproj", "{6EAB6150-6C3F-4143-95E3-CB38A8C036A2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolePersonaApp", "..\ConsolePersonaApp\ConsolePersonaApp\ConsolePersonaApp.csproj", "{7CB5768B-A7DB-4DAD-9FAB-48AACD751536}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6EAB6150-6C3F-4143-95E3-CB38A8C036A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EAB6150-6C3F-4143-95E3-CB38A8C036A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EAB6150-6C3F-4143-95E3-CB38A8C036A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CB5768B-A7DB-4DAD-9FAB-48AACD751536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB5768B-A7DB-4DAD-9FAB-48AACD751536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB5768B-A7DB-4DAD-9FAB-48AACD751536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB5768B-A7DB-4DAD-9FAB-48AACD751536}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
